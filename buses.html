@@ -14,18 +14,35 @@
 // single bus - static
 // ------------------------------------
 // YOUR CODE
-
+// var locations = getBusLocations();
+// var bus = locations.vehicle[0];
+// addMarker(bus);
 
 // ------------------------------------
 // all buses - static
 // ------------------------------------
 // YOUR CODE
-
+// var locations = getBusLocations();
+// for (var i = 0; i < locations.vehicle.length; i++) {
+//   var bus = locations.vehicle[i];
+//   addMarker(bus);
+// }
 // ------------------------------------
 // all buses - timer
 // ------------------------------------
 // YOUR CODE
-
+var showBuses = function() {
+  var locations = getBusLocations();
+  var length = locations.vehicle.length;
+  var bus = null;
+  for (var i = 0; i < length; i++) {
+    bus = locations.vehicle[i];
+    addMarker(bus);
+  }
+  console.log(new Date());
+}
+showBuses();
+setInterval(showBuses, 15000);
 
 </script>
 </html>
